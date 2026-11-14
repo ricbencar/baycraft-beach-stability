@@ -1,0 +1,16 @@
+OLIVEIRA2010 - HSU1989 | EXECUTIVE COMPARISON CONCLUSIONS
+======================================================================
+
+01. OVERALL RESULT: VERY SIMILAR. Oliveira2010 and Hsu1989 predict very similar normalized beach planforms under identical geometric controls across the selected common comparison domain.
+02. Average agreement: RMS difference 0.00519081 in R/R0 (0.519% of the control radius R0); mean absolute difference 0.00288316 (0.288% of R0).
+03. Extent of agreement: 93.98% of 170,233 valid grid pairs differ by no more than 0.01 in R/R0 (1% of R0); 98.42% differ by no more than 2% of R0.
+04. Localized maximum: |difference| = 0.04659859 (4.660% of R0), near beta=80.0000 deg and theta=80.0000 deg. This is an extrema check across 20,001 beta samples and analytic extrema in q=beta/theta, not a certified global optimum.
+05. Individual fitted coefficients differ more than the combined predicted radial shapes: their constant, linear and quadratic contributions partly compensate in the parabolic equation.
+06. Endpoint qualification: at beta=theta=80.0000 deg, Oliveira R/R0=1.060600 and Hsu R/R0=1.014001; their separation is 0.046599 R0. These unconstrained polynomial fits are not snapped to the ideal endpoint value R/R0=1.
+07. Scale illustration only: if R0=100 m, the grid RMS radial difference is 0.519 m, while the largest checked radial difference is 4.660 m.
+08. Engineering relevance: uncertainty in choosing diffraction point H, downcoast control E and representative wave direction W may be more consequential than differences between these two coefficient sets, but that uncertainty was not quantified here.
+09. IMPORTANT LIMITATION: near-agreement between the two equations does NOT establish predictive accuracy against a measured shoreline, nor does it prove that their source-data or field uncertainties are equivalent. A site-specific validation with observed shoreline and wave data is still required.
+10. Domain: 22.19 <= beta <= 80 deg, beta <= theta <= 270 deg. Statistics use valid uniform rectangular-grid samples, not independent observations.
+
+Percentages refer to the nominal control radius R0, not local R/R0.
+The 'VERY SIMILAR' assessment is descriptive, not a design tolerance.

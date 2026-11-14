@@ -1,0 +1,3 @@
+kind,beta_deg,theta_deg,delta_r_ratio,method
+minimum,28.6965155,58.595712763432,-0.001495555329246497,"20001 beta samples; analytic q extrema, including theta=beta"
+maximum,80,80,0.04659859314143078,"20001 beta samples; analytic q extrema, including theta=beta"

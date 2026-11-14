@@ -1,0 +1,179 @@
+OLIVEIRA2010 AND HSU1989 - COEFFICIENT AND MODEL COMPARISON
+========================================================================
+
+EXECUTIVE CONCLUSIONS - DATA-DRIVEN MODEL AGREEMENT
+----------------------------------------------------------------------
+01. OVERALL RESULT: VERY SIMILAR. Oliveira2010 and Hsu1989 predict very similar normalized beach planforms under identical geometric controls across the selected common comparison domain.
+02. Average agreement: RMS difference 0.00519081 in R/R0 (0.519% of the control radius R0); mean absolute difference 0.00288316 (0.288% of R0).
+03. Extent of agreement: 93.98% of 170,233 valid grid pairs differ by no more than 0.01 in R/R0 (1% of R0); 98.42% differ by no more than 2% of R0.
+04. Localized maximum: |difference| = 0.04659859 (4.660% of R0), near beta=80.0000 deg and theta=80.0000 deg. This is an extrema check across 20,001 beta samples and analytic extrema in q=beta/theta, not a certified global optimum.
+05. Individual fitted coefficients differ more than the combined predicted radial shapes: their constant, linear and quadratic contributions partly compensate in the parabolic equation.
+06. Endpoint qualification: at beta=theta=80.0000 deg, Oliveira R/R0=1.060600 and Hsu R/R0=1.014001; their separation is 0.046599 R0. These unconstrained polynomial fits are not snapped to the ideal endpoint value R/R0=1.
+07. Scale illustration only: if R0=100 m, the grid RMS radial difference is 0.519 m, while the largest checked radial difference is 4.660 m.
+08. Engineering relevance: uncertainty in choosing diffraction point H, downcoast control E and representative wave direction W may be more consequential than differences between these two coefficient sets, but that uncertainty was not quantified here.
+09. IMPORTANT LIMITATION: near-agreement between the two equations does NOT establish predictive accuracy against a measured shoreline, nor does it prove that their source-data or field uncertainties are equivalent. A site-specific validation with observed shoreline and wave data is still required.
+10. Domain: 22.19 <= beta <= 80 deg, beta <= theta <= 270 deg. Statistics use valid uniform rectangular-grid samples, not independent observations.
+
+The qualitative similarity label is descriptive, not a design
+acceptance criterion. All percentage-of-R0 figures use the nominal
+control radius, not an individual local predicted radius.
+
+1. NOTATION AND SOURCES
+Display: r = R/R0 = C1(beta) + C2(beta)*q + C3(beta)*q^2.
+q = beta/theta; beta and theta are in degrees.
+Display C1/C2/C3 correspond exactly to source C0/C1/C2.
+C1 is constant in q; C2 is linear in q; C3 is quadratic in q.
+There is no cubic term. Oliveira's alpha is denoted theta here.
+Each coefficient is a degree-six polynomial in beta in degrees.
+Coefficient arrays are stored in ascending powers and evaluated by Horner.
+
+These supplied polynomial fits are software-derived approximations to
+source coefficient tables, not polynomial equations from the original papers.
+No refitting, coefficient normalization or endpoint snapping is applied.
+
+2. COVERAGE AND CHOSEN COMPARISON GRID
+Oliveira coefficient data coverage: beta 22.19 to 88.29 degrees.
+Hsu coefficient data coverage: beta 10 to 80 degrees.
+Shared coefficient data coverage: beta 22.19 to 80 degrees.
+Actual paired comparison: beta 22.19 to 80 degrees.
+Rectangular grid: 401 uniformly spaced beta nodes x 481 uniformly spaced theta nodes.
+Theta grid: 22.19 to 270 degrees.
+Only theta >= beta is included in curved-branch comparisons.
+Number of retained rectangular-grid points: 170233.
+RMS, mean, percentiles and histogram counts weight these retained nodes equally.
+They depend on the chosen grid and angular extent, not on field sampling.
+Coefficient coverage is not independent physical validation of a beach model.
+The angular extent is a plotting choice. The supplied Baycraft README uses
+theta_max=150 degrees; run --theta-max 150 to use that extent instead.
+
+3. DIFFERENCE DEFINITIONS
+delta_r = r_Oliveira - r_Hsu (dimensionless).
+Fit residual everywhere in these new outputs = fitted - observed.
+This reverses the residual sign printed in the supplied Hsu output report.
+RMS difference = sqrt(mean(delta_r^2)); MAE difference = mean(abs(delta_r)).
+Symmetric percent difference = 200*delta_r/(abs(r_Oliveira)+abs(r_Hsu)).
+Percent values are omitted when the denominator is below 0.02.
+This percent is not a percent error with one model treated as ground truth.
+Radial separation at common beta/theta is R0*delta_r; it is not automatically
+the perpendicular or nearest-point separation between two shorelines.
+
+4. MODEL DIFFERENCES ON THE RETAINED RECTANGULAR GRID
+Mean signed difference                    : 0.00252949984023
+RMS difference                            : 0.00519081077568
+Mean absolute difference                  : 0.00288315815982
+Median signed difference                  : 0.00161450968534
+95th percentile absolute difference       : 0.0116220731978
+Maximum absolute sampled difference       : 0.0465919504968
+
+Extrema check including the theta=beta boundary exactly:
+20,001 beta samples; analytic quadratic extrema in q at each beta.
+This is not a certified continuous two-dimensional optimization.
+Minimum delta_r = -0.00149555532925; beta = 28.696516 deg; theta = 58.595713 deg.
+Maximum delta_r = +0.0465985931414; beta = 80 deg; theta = 80 deg.
+
+5. COEFFICIENT DIFFERENCES ON THE COMPARISON BETA GRID
+Display   Source       Mean(O-H)          RMS(O-H)          Max abs(O-H)
+C1        C0         1.2738055426e-03   1.8517239012e-03   3.6729105071e-03
+C2        C1         2.4151876475e-03   1.0855007036e-02   5.0678229363e-02
+C3        C2         1.1102429114e-03   4.5800166186e-03   8.4715450272e-03
+
+6. ENDPOINT CLOSURE AND RADIAL BEHAVIOR
+At theta=beta, r = C1+C2+C3. The ideal control radius would give r=1.
+The displayed endpoint defect is C1+C2+C3-1; its sign is retained.
+Neither the polynomials nor plotted curves are renormalized.
+Oliveira2010 endpoint defect min -0.00397572964996 at beta 33.752 deg; max +0.0605999347307 at beta 80 deg.
+Oliveira2010 grid r range 0.0817505501064 to 1.06048421402; 0 negative radii; 400 radii greater than one.
+Hsu1989 endpoint defect min -0.00598707977875 at beta 50.22785 deg; max +0.0140013415893 at beta 80 deg.
+Hsu1989 grid r range 0.0673549793956 to 1.01389226352; 0 negative radii; 136 radii greater than one.
+Negative raw radii, if requested with a longer angular extent, remain in
+the numerical data and diagnostics; Cartesian planforms omit them.
+A negative constant coefficient alone does not imply a negative radius.
+
+7. ANALYTICAL SENSITIVITIES
+dr/dtheta = -beta/theta^2 * (C2+2*C3*q), at fixed beta.
+dr/dbeta = C1' + C2'*q + C3'*q^2 + (C2+2*C3*q)/theta, at fixed theta.
+All angular derivatives are per degree, with R0 held fixed.
+These local derivatives do not include changes in control-point location,
+R0, orientation, or a distribution of wave directions.
+
+8. HSU TABLE-FIT DIAGNOSTICS - RECOMPUTED
+The 15 rounded observations are the supplied Table 2 transcription.
+Residuals are fitted minus observed. RMSE divides SSE by 15.
+R_squared = 1-SSE/SST, using each coefficient's own source rows.
+Display Source       R_squared             RMSE          LOO RMSE
+C1      C0      0.999990292577   6.6990481343e-04   2.4806208797e-03
+C2      C1      0.999984847282   2.0443783763e-03   5.6975422245e-03
+C3      C2      0.999947079068   2.2875106866e-03   8.2280860054e-03
+The degree-six design has p=7 parameters and n=15 observations (8 residual df).
+Leverage h_j is obtained from QR of scaled-beta Vandermonde columns.
+MSE = SSE/(n-p); standardized residual = e_j/sqrt(MSE*(1-h_j)).
+Cook's distance = e_j^2*h_j/[p*MSE*(1-h_j)^2].
+Leave-one-out prediction minus observation = e_j/(1-h_j).
+The analytic leave-one-out expression applies to this same unweighted
+degree-six linear least-squares fit, with one table row omitted in turn.
+The Q-Q and influence plots are descriptive checks on a small rounded table.
+No normality, independent field-error or confidence-band claim is made.
+Linear-interpolation comparisons use adjacent Hsu table rows only.
+
+9. OLIVEIRA FIT SUMMARIES - QUOTED FROM THE SUPPLIED FILE
+The 48 original coefficient rows are unavailable in this request.
+No Oliveira per-row residuals, leverage, Cook's distance or Q-Q plot is generated.
+Display Source       R_squared             RMSE             MAE
+C1      C0      0.999998926818   2.0381105680e-04   1.4595145370e-04
+C2      C1      0.999996793023   7.8815077720e-04   5.1479041760e-04
+C3      C2      0.999999569897   1.4923439320e-04   1.1098058340e-04
+The two models' training rows, coverage and rounding differ. These fit
+statistics do not rank their ability to predict real shoreline geometry.
+
+10. FIXED PLANFORM REFERENCE
+For every overlay: H=(0,0), nominal E=(1,0), R0=1.
+phi = (theta-beta)*pi/180; x/R0 = r*cos(phi); y/R0 = r*sin(phi).
+Axes have equal scale. Both models use the same origin, angle and length.
+The nominal E point stays fixed; each model keeps its actual starting radius.
+
+11. FIGURES
+00_executive_conclusions.png: Executive summary: strong agreement of predicted planforms, quantified differences, localized maximum, and field-validation caveats.
+01_model_comparison.png: Direct radial and Cartesian comparison of both supplied models at a common beta.
+02_coefficient_functions.png: Coefficient functions on their own data coverage; pale shading identifies the common comparison interval.
+03_coefficient_differences.png: Signed coefficient differences without unstable division by coefficients that cross zero.
+04_coefficient_derivatives.png: Analytical first and second derivatives reveal coefficient sensitivity and curvature.
+05_endpoint_closure.png: Departure from the nominal control radius caused by the unconstrained coefficient fits.
+06_radius_profiles_by_beta.png: Paired radius profiles for representative beta values in the common range.
+07_radius_profiles_by_theta.png: Fixed-theta model families show variation with beta, restricted to the common curved-branch domain.
+08_normalized_planforms.png: Common-axis planform overlays use identical H, E, scale and orientation for both models.
+09_model_surfaces.png: Radius surfaces share identical color limits to support direct comparison.
+10_radius_difference_maps.png: Signed and absolute radius-ratio differences over the common angle grid.
+11_symmetric_percentage_difference.png: Symmetric relative differences use an explicit denominator threshold and no model as an accuracy reference.
+12_model_agreement.png: Model equality and difference-versus-mean diagnostics, with grid-point densities and no inferential agreement limits.
+13_difference_distributions.png: Histogram and empirical cumulative distribution of deterministic model differences on the selected grid.
+14_difference_metrics_by_angle.png: RMS, mean absolute and maximum absolute differences grouped by each sampled angle.
+15_beta_sensitivity.png: Analytical beta sensitivity of both coefficient-based models at fixed theta.
+16_theta_sensitivity.png: Analytical theta sensitivities on a common color scale.
+17_coefficient_contributions.png: Exact decomposition of the model-output difference into constant, linear and quadratic coefficient contributions.
+18_hsu_table_residuals.png: Recomputed Hsu fit residuals at the actual 15 supplied table rows; no invented Oliveira observations.
+19_hsu_fit_and_qq.png: Hsu observed-versus-fitted coefficients and descriptive standardized-residual Q-Q plots.
+20_hsu_leverage_influence.png: Design leverage and per-coefficient Cook's distance for the Hsu source-table regression.
+21_hsu_leave_one_out.png: Actual leave-one-out coefficient-prediction errors contrasted with in-sample residuals.
+22_hsu_interpolation_diagnostic.png: Hsu sixth-degree polynomial versus piecewise-linear interpolation of the same table, without model conflation.
+
+12. DATA FILES
+comparison_conclusions.csv
+coefficient_polynomials.csv
+coefficient_comparison.csv
+boundary_diagnostics.csv
+model_comparison_grid.csv
+hsu_fit_residuals.csv
+fit_statistics.csv
+difference_statistics_by_angle.csv
+sampled_difference_extrema.csv
+comparison_conclusions.txt: standalone executive interpretation and limitations.
+comparison_metadata.json: coefficients, settings, results and figure inventory.
+comparison_plots.pdf: one figure per page; vector text and linework.
+PNG figures are saved at the requested DPI (default 300).
+
+13. REPRODUCIBILITY
+Python 3.13.13; NumPy 2.5.4; Matplotlib 3.10.8.
+Run: python script.py --no-show
+For the supplied README's angular extent: python script.py --theta-max 150
+For a physical scale: python script.py --r0-m 100
+For all options: python script.py --help

@@ -1,0 +1,17 @@
+indicator,value,unit,interpretation
+classification,VERY SIMILAR,descriptive,Not a formal acceptance criterion
+rms_difference,0.005190810775675286,R/R0,Grid RMS; model minus model
+rms_percent_of_R0,0.5190810775675286,% of R0,Not percentage of local modeled radius
+mean_absolute_difference,0.002883158159819597,R/R0,Grid mean absolute difference
+p95_absolute_difference,0.01162207319782758,R/R0,95th percentile on grid
+fraction_abs_difference_le_1percent_R0,0.9397707847479631,fraction,Threshold: abs(delta R/R0) <= 0.01
+fraction_abs_difference_le_2percent_R0,0.9842333742576351,fraction,Threshold: abs(delta R/R0) <= 0.02
+valid_grid_points,170233,points,Not independent field observations
+largest_checked_abs_difference,0.04659859314143078,R/R0,Sampled-beta extrema check; not certified global
+largest_checked_percent_of_R0,4.659859314143078,% of R0,Sampled-beta extrema check
+largest_checked_beta,80,degrees,Angle of maximum absolute difference
+largest_checked_theta,80,degrees,Angle of maximum absolute difference
+endpoint_Oliveira,1.060599934730718,R/R0,At beta=theta=beta_max
+endpoint_Hsu,1.014001341589287,R/R0,At beta=theta=beta_max
+reference_R0,100,m,Illustrative value if --r0-m omitted
+field_validation_performed,False,boolean,Model agreement is not validation

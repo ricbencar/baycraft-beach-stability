@@ -1,0 +1,436 @@
+{
+  "settings": {
+    "beta_min": 22.19,
+    "beta_max": 80.0,
+    "theta_max": 270.0,
+    "n_beta": 401,
+    "n_theta": 481,
+    "dpi": 300,
+    "r0_m": null,
+    "output_dir": "C:\\Downloads\\github\\bayed-beach-stability-main\\coefficients\\comparison",
+    "no_show": false
+  },
+  "notation": {
+    "C1": "source C0; constant",
+    "C2": "source C1; linear in q",
+    "C3": "source C2; quadratic in q"
+  },
+  "models": [
+    {
+      "name": "Oliveira2010",
+      "polynomials": [
+        [
+          0.08937992713488893,
+          -0.007401074723096999,
+          0.0005012807249540635,
+          -1.3097394953416148e-05,
+          1.1423122564951566e-07,
+          -5.20451957364359e-10,
+          1.6282762116787805e-12
+        ],
+        [
+          0.8816234880541433,
+          0.0151463216517591,
+          -0.0006970315930635012,
+          1.675784807058743e-05,
+          4.1151569864693824e-08,
+          -2.832095387963676e-09,
+          1.5079413405730286e-11
+        ],
+        [
+          0.01874024989140376,
+          -0.00732383361831883,
+          0.0002684239844055041,
+          -1.086650866142786e-05,
+          7.927685280204985e-08,
+          9.929544660822935e-11,
+          -2.658396193986627e-13
+        ]
+      ],
+      "beta_min": 22.19,
+      "beta_max": 88.29,
+      "color": "#00857D",
+      "linestyle": "-"
+    },
+    {
+      "name": "Hsu1989",
+      "polynomials": [
+        [
+          -0.025948717948720286,
+          0.009437146939748028,
+          -0.00040811322978137366,
+          1.0108930697786255e-05,
+          -1.786056644880358e-07,
+          1.1488449630866086e-09,
+          -1.3026029125105853e-12
+        ],
+        [
+          1.3292717948718358,
+          -0.0657200159561853,
+          0.0046454080433615905,
+          -0.00015110565213940694,
+          2.7247346369948383e-06,
+          -2.3730284988490486e-08,
+          7.720215571609159e-11
+        ],
+        [
+          -0.2917051282051357,
+          0.054566218941018596,
+          -0.004168814649872592,
+          0.00014006101055807072,
+          -2.554072751007756e-06,
+          2.2867190600936895e-08,
+          -7.754156633413654e-11
+        ]
+      ],
+      "beta_min": 10.0,
+      "beta_max": 80.0,
+      "color": "#D06B28",
+      "linestyle": "--"
+    }
+  ],
+  "hsu_observations_beta_C1_C2_C3": [
+    [
+      10.0,
+      0.036,
+      1.011,
+      -0.047
+    ],
+    [
+      15.0,
+      0.05,
+      0.998,
+      -0.049
+    ],
+    [
+      20.0,
+      0.055,
+      1.029,
+      -0.088
+    ],
+    [
+      25.0,
+      0.054,
+      1.083,
+      -0.142
+    ],
+    [
+      30.0,
+      0.045,
+      1.146,
+      -0.194
+    ],
+    [
+      35.0,
+      0.029,
+      1.22,
+      -0.253
+    ],
+    [
+      40.0,
+      0.0,
+      1.326,
+      -0.332
+    ],
+    [
+      45.0,
+      -0.039,
+      1.446,
+      -0.412
+    ],
+    [
+      50.0,
+      -0.088,
+      1.588,
+      -0.507
+    ],
+    [
+      55.0,
+      -0.151,
+      1.756,
+      -0.611
+    ],
+    [
+      60.0,
+      -0.227,
+      1.93,
+      -0.706
+    ],
+    [
+      65.0,
+      -0.315,
+      2.113,
+      -0.8
+    ],
+    [
+      70.0,
+      -0.409,
+      2.284,
+      -0.873
+    ],
+    [
+      75.0,
+      -0.505,
+      2.422,
+      -0.909
+    ],
+    [
+      80.0,
+      -0.6,
+      2.52,
+      -0.906
+    ]
+  ],
+  "oliveira_fit_metrics_quoted": [
+    {
+      "r_squared": 0.999998926818,
+      "rmse": 0.0002038110568,
+      "mae": 0.0001459514537,
+      "max_abs": 0.0005235919291,
+      "sse": 1.99386945e-06
+    },
+    {
+      "r_squared": 0.999996793023,
+      "rmse": 0.0007881507772,
+      "mae": 0.0005147904176,
+      "max_abs": 0.003901640958,
+      "sse": 2.981671908e-05
+    },
+    {
+      "r_squared": 0.999999569897,
+      "rmse": 0.0001492343932,
+      "mae": 0.0001109805834,
+      "max_abs": 0.0004697339625,
+      "sse": 1.069003398e-06
+    }
+  ],
+  "hsu_fit_metrics_recomputed": [
+    {
+      "r_squared": 0.9999902925765777,
+      "rmse": 0.0006699048134258776,
+      "mae": 0.0005500346643381173,
+      "max_abs": 0.0012527585933158267,
+      "sse": 6.731586885767396e-06,
+      "loo_rmse": 0.0024806208796913313
+    },
+    {
+      "r_squared": 0.9999848472822703,
+      "rmse": 0.0020443783763472475,
+      "mae": 0.0015375502103694835,
+      "max_abs": 0.00540517583552047,
+      "sse": 6.269224418514312e-05,
+      "loo_rmse": 0.0056975422244526395
+    },
+    {
+      "r_squared": 0.9999470790675294,
+      "rmse": 0.0022875106866271336,
+      "mae": 0.0017437940250315809,
+      "max_abs": 0.004789275224259759,
+      "sse": 7.849057712150009e-05,
+      "loo_rmse": 0.008228086005430573
+    }
+  ],
+  "model_difference_grid_metrics": {
+    "count": 170233,
+    "mean": 0.0025294998402253105,
+    "rms": 0.005190810775675286,
+    "mean_abs": 0.002883158159819597,
+    "median": 0.001614509685344434,
+    "p95_abs": 0.011622073197827576,
+    "min": -0.001495523085649042,
+    "max": 0.04659195049682241,
+    "max_abs": 0.04659195049682241
+  },
+  "coefficient_difference_grid_metrics": [
+    {
+      "count": 401,
+      "mean": 0.0012738055426393547,
+      "rms": 0.0018517239011560068,
+      "mean_abs": 0.0014987115474140308,
+      "median": 0.0013156777874698822,
+      "p95_abs": 0.0035424171053567988,
+      "min": -0.001719579238346633,
+      "max": 0.0036729105071334756,
+      "max_abs": 0.0036729105071334756
+    },
+    {
+      "count": 401,
+      "mean": 0.0024151876474996724,
+      "rms": 0.010855007036015607,
+      "mean_abs": 0.007612275776598134,
+      "median": 0.0004769275947766882,
+      "p95_abs": 0.022815099936801086,
+      "min": -0.009455223774466948,
+      "max": 0.05067822936256805,
+      "max_abs": 0.05067822936256805
+    },
+    {
+      "count": 401,
+      "mean": 0.001110242911372132,
+      "rms": 0.004580016618609802,
+      "mean_abs": 0.003977869270868488,
+      "median": 0.0014221417177686657,
+      "p95_abs": 0.008203168612031103,
+      "min": -0.006007600705884908,
+      "max": 0.008471545027211647,
+      "max_abs": 0.008471545027211647
+    }
+  ],
+  "difference_extrema_check": {
+    "beta_samples": 20001,
+    "minimum": {
+      "delta_r": -0.0014955553292464966,
+      "beta_deg": 28.696515500000004,
+      "theta_deg": 58.595712763432
+    },
+    "maximum": {
+      "delta_r": 0.04659859314143078,
+      "beta_deg": 80.0,
+      "theta_deg": 80.0
+    }
+  },
+  "engineering_conclusions": {
+    "classification": "VERY SIMILAR",
+    "executive_summary": "Oliveira2010 and Hsu1989 predict very similar normalized beach planforms under identical geometric controls across the selected common comparison domain.",
+    "rms_difference_r_ratio": 0.005190810775675286,
+    "rms_percent_of_R0": 0.5190810775675286,
+    "mean_absolute_difference_r_ratio": 0.002883158159819597,
+    "p95_absolute_difference_r_ratio": 0.011622073197827576,
+    "fraction_abs_delta_le_1percent_R0": 0.939770784747963,
+    "fraction_abs_delta_le_2percent_R0": 0.9842333742576351,
+    "valid_grid_points": 170233,
+    "maximum_checked_absolute_difference_r_ratio": 0.04659859314143078,
+    "maximum_checked_percent_of_R0": 4.659859314143078,
+    "maximum_checked_beta_deg": 80.0,
+    "maximum_checked_theta_deg": 80.0,
+    "boundary_beta_deg": 80.0,
+    "endpoint_oliveira_r_ratio": 1.0605999347307185,
+    "endpoint_hsu_r_ratio": 1.0140013415892875,
+    "r0_m_used_for_illustration": 100.0,
+    "r0_is_illustrative": true,
+    "conclusions": [
+      "OVERALL RESULT: VERY SIMILAR. Oliveira2010 and Hsu1989 predict very similar normalized beach planforms under identical geometric controls across the selected common comparison domain.",
+      "Average agreement: RMS difference 0.00519081 in R/R0 (0.519% of the control radius R0); mean absolute difference 0.00288316 (0.288% of R0).",
+      "Extent of agreement: 93.98% of 170,233 valid grid pairs differ by no more than 0.01 in R/R0 (1% of R0); 98.42% differ by no more than 2% of R0.",
+      "Localized maximum: |difference| = 0.04659859 (4.660% of R0), near beta=80.0000 deg and theta=80.0000 deg. This is an extrema check across 20,001 beta samples and analytic extrema in q=beta/theta, not a certified global optimum.",
+      "Individual fitted coefficients differ more than the combined predicted radial shapes: their constant, linear and quadratic contributions partly compensate in the parabolic equation.",
+      "Endpoint qualification: at beta=theta=80.0000 deg, Oliveira R/R0=1.060600 and Hsu R/R0=1.014001; their separation is 0.046599 R0. These unconstrained polynomial fits are not snapped to the ideal endpoint value R/R0=1.",
+      "Scale illustration only: if R0=100 m, the grid RMS radial difference is 0.519 m, while the largest checked radial difference is 4.660 m.",
+      "Engineering relevance: uncertainty in choosing diffraction point H, downcoast control E and representative wave direction W may be more consequential than differences between these two coefficient sets, but that uncertainty was not quantified here.",
+      "IMPORTANT LIMITATION: near-agreement between the two equations does NOT establish predictive accuracy against a measured shoreline, nor does it prove that their source-data or field uncertainties are equivalent. A site-specific validation with observed shoreline and wave data is still required.",
+      "Domain: 22.19 <= beta <= 80 deg, beta <= theta <= 270 deg. Statistics use valid uniform rectangular-grid samples, not independent observations."
+    ],
+    "classification_is_descriptive_not_acceptance_criterion": true,
+    "source_model_field_validation_performed": false
+  },
+  "figures": [
+    {
+      "filename": "00_executive_conclusions.png",
+      "caption": "Executive summary: strong agreement of predicted planforms, quantified differences, localized maximum, and field-validation caveats."
+    },
+    {
+      "filename": "01_model_comparison.png",
+      "caption": "Direct radial and Cartesian comparison of both supplied models at a common beta."
+    },
+    {
+      "filename": "02_coefficient_functions.png",
+      "caption": "Coefficient functions on their own data coverage; pale shading identifies the common comparison interval."
+    },
+    {
+      "filename": "03_coefficient_differences.png",
+      "caption": "Signed coefficient differences without unstable division by coefficients that cross zero."
+    },
+    {
+      "filename": "04_coefficient_derivatives.png",
+      "caption": "Analytical first and second derivatives reveal coefficient sensitivity and curvature."
+    },
+    {
+      "filename": "05_endpoint_closure.png",
+      "caption": "Departure from the nominal control radius caused by the unconstrained coefficient fits."
+    },
+    {
+      "filename": "06_radius_profiles_by_beta.png",
+      "caption": "Paired radius profiles for representative beta values in the common range."
+    },
+    {
+      "filename": "07_radius_profiles_by_theta.png",
+      "caption": "Fixed-theta model families show variation with beta, restricted to the common curved-branch domain."
+    },
+    {
+      "filename": "08_normalized_planforms.png",
+      "caption": "Common-axis planform overlays use identical H, E, scale and orientation for both models."
+    },
+    {
+      "filename": "09_model_surfaces.png",
+      "caption": "Radius surfaces share identical color limits to support direct comparison."
+    },
+    {
+      "filename": "10_radius_difference_maps.png",
+      "caption": "Signed and absolute radius-ratio differences over the common angle grid."
+    },
+    {
+      "filename": "11_symmetric_percentage_difference.png",
+      "caption": "Symmetric relative differences use an explicit denominator threshold and no model as an accuracy reference."
+    },
+    {
+      "filename": "12_model_agreement.png",
+      "caption": "Model equality and difference-versus-mean diagnostics, with grid-point densities and no inferential agreement limits."
+    },
+    {
+      "filename": "13_difference_distributions.png",
+      "caption": "Histogram and empirical cumulative distribution of deterministic model differences on the selected grid."
+    },
+    {
+      "filename": "14_difference_metrics_by_angle.png",
+      "caption": "RMS, mean absolute and maximum absolute differences grouped by each sampled angle."
+    },
+    {
+      "filename": "15_beta_sensitivity.png",
+      "caption": "Analytical beta sensitivity of both coefficient-based models at fixed theta."
+    },
+    {
+      "filename": "16_theta_sensitivity.png",
+      "caption": "Analytical theta sensitivities on a common color scale."
+    },
+    {
+      "filename": "17_coefficient_contributions.png",
+      "caption": "Exact decomposition of the model-output difference into constant, linear and quadratic coefficient contributions."
+    },
+    {
+      "filename": "18_hsu_table_residuals.png",
+      "caption": "Recomputed Hsu fit residuals at the actual 15 supplied table rows; no invented Oliveira observations."
+    },
+    {
+      "filename": "19_hsu_fit_and_qq.png",
+      "caption": "Hsu observed-versus-fitted coefficients and descriptive standardized-residual Q-Q plots."
+    },
+    {
+      "filename": "20_hsu_leverage_influence.png",
+      "caption": "Design leverage and per-coefficient Cook's distance for the Hsu source-table regression."
+    },
+    {
+      "filename": "21_hsu_leave_one_out.png",
+      "caption": "Actual leave-one-out coefficient-prediction errors contrasted with in-sample residuals."
+    },
+    {
+      "filename": "22_hsu_interpolation_diagnostic.png",
+      "caption": "Hsu sixth-degree polynomial versus piecewise-linear interpolation of the same table, without model conflation."
+    }
+  ],
+  "tables": [
+    "comparison_conclusions.csv",
+    "coefficient_polynomials.csv",
+    "coefficient_comparison.csv",
+    "boundary_diagnostics.csv",
+    "model_comparison_grid.csv",
+    "hsu_fit_residuals.csv",
+    "fit_statistics.csv",
+    "difference_statistics_by_angle.csv",
+    "sampled_difference_extrema.csv"
+  ],
+  "runtime": {
+    "python": "3.13.13",
+    "numpy": "2.5.4",
+    "matplotlib": "3.10.8"
+  }
+}
