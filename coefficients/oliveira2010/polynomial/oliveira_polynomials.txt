@@ -1,0 +1,79 @@
+EXPANDED SIXTH-DEGREE EQUATIONS
+-------------------------------
+
+C0(beta) = 8.9379927134888931e-02 - 7.4010747230969986e-03*beta + 5.0128072495406347e-04*beta^2 - 1.3097394953416148e-05*beta^3 + 1.1423122564951566e-07*beta^4 - 5.2045195736435901e-10*beta^5 + 1.6282762116787805e-12*beta^6
+
+C1(beta) = 8.8162348805414326e-01 + 1.5146321651759101e-02*beta - 6.9703159306350117e-04*beta^2 + 1.6757848070587428e-05*beta^3 + 4.1151569864693824e-08*beta^4 - 2.8320953879636758e-09*beta^5 + 1.5079413405730286e-11*beta^6
+
+C2(beta) = 1.8740249891403760e-02 - 7.3238336183188302e-03*beta + 2.6842398440550411e-04*beta^2 - 1.0866508661427859e-05*beta^3 + 7.9276852802049855e-08*beta^4 + 9.9295446608229346e-11*beta^5 - 2.6583961939866272e-13*beta^6
+
+SOURCE AND FIT
+--------------
+Workbook: oliveira2010_table1.xlsx
+Worksheet: coeffs; header row: 9
+Source columns: beta in degrees; C0 constant, C1 linear, C2 quadratic.
+Workbook attribution: Oliveira & Barreiro (2010), Table 1, p. 127.
+Observations used: 48; distinct beta values: 47
+Exact repeated numeric records beyond first occurrences: 1 (retained)
+Data interval: 22.19 <= beta <= 88.29 degrees
+Polynomial degree: 6; parameters per coefficient: 7
+Method: least-squares
+Scaled coordinate: x = (beta - 55.24) / 33.05
+Scaled Chebyshev design condition number (binary64 diagnostic): 4.44992
+All input rows are used. No clipping, extra points, or coefficient normalization.
+The separate 'Table 1' worksheet is not used as an additional data source.
+
+R/R0 = C0(beta) + C1(beta)*q + C2(beta)*q^2; q = beta/alpha.
+
+FIT ACCURACY AT THE SOURCE ROWS
+--------------------------------
+Residual = fitted - observed. RMSE divides SSE by the number of source rows.
+Series         R_squared             RMSE              MAE    Max_abs_error              SSE
+C0        0.999998926818  2.038110568e-04  1.459514537e-04  5.235919291e-04  1.993869450e-06
+C1        0.999996793023  7.881507772e-04  5.147904176e-04  3.901640958e-03  2.981671908e-05
+C2        0.999999569897  1.492343932e-04  1.109805834e-04  4.697339625e-04  1.069003398e-06
+
+C0: largest error at beta=66.71, worksheet row 31, beach=19, fit=1; Unweighted least squares, QR, 80 decimal digits.
+C1: largest error at beta=71.57, worksheet row 33, beach=21, fit=1; Unweighted least squares, QR, 80 decimal digits.
+C2: largest error at beta=36.03, worksheet row 55, beach=40, fit=2; Unweighted least squares, QR, 80 decimal digits.
+
+NUMERICAL EXPORT CHECK
+----------------------
+Expanded coefficients contain 17 significant digits (.16e formatting).
+Binary64 Horner was compared with the fitted high-precision Chebyshev form at 2001 grid points.
+This sampled computational check is separate from the table-fitting errors above.
+C0: maximum sampled numerical discrepancy = 1.384695745e-15
+C1: maximum sampled numerical discrepancy = 2.036567988e-15
+C2: maximum sampled numerical discrepancy = 1.258957809e-15
+
+INTERPRETATION
+--------------
+These are new regressions of the supplied coefficients, not published Oliveira polynomial equations.
+Least squares minimizes the sum of squared table residuals for the selected degree.
+Minimax minimizes the largest absolute table residual; it can increase RMSE.
+Additional arithmetic digits do not remove the approximation error.
+The interval above describes data coverage, not independently established model validity.
+Neither high R-squared nor small table residuals establish accuracy between observations.
+Avoid extrapolation. High degrees can oscillate between rows, especially across large beta gaps.
+No condition C0+C1+C2=1 is imposed, because the supplied coefficients do not satisfy it exactly.
+Use **, not ^, for exponentiation in Python. ^ is used only in the requested printed format.
+
+PYTHON COEFFICIENTS AND HORNER EVALUATOR
+---------------------------------------
+# Ascending powers: constant, beta, beta**2, ..., beta**degree.
+COEFFICIENTS = {
+    'C0': (8.9379927134888931e-02, -7.4010747230969986e-03, 5.0128072495406347e-04, -1.3097394953416148e-05, 1.1423122564951566e-07, -5.2045195736435901e-10, 1.6282762116787805e-12),
+    'C1': (8.8162348805414326e-01, 1.5146321651759101e-02, -6.9703159306350117e-04, 1.6757848070587428e-05, 4.1151569864693824e-08, -2.8320953879636758e-09, 1.5079413405730286e-11),
+    'C2': (1.8740249891403760e-02, -7.3238336183188302e-03, 2.6842398440550411e-04, -1.0866508661427859e-05, 7.9276852802049855e-08, 9.9295446608229346e-11, -2.6583961939866272e-13),
+}
+
+def horner(coefficients, beta):
+    value = 0.0
+    for coefficient in reversed(coefficients):
+        value = value * beta + coefficient
+    return value
+
+def coefficients(beta):
+    if not 22.19 <= beta <= 88.29:
+        raise ValueError('beta is outside the fitted data interval')
+    return tuple(horner(values, beta) for values in COEFFICIENTS.values())
