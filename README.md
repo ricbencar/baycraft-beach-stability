@@ -4,7 +4,7 @@
 
 Baycraft calculator constructs and measures equilibrium-planform overlays on coastal imagery using the parabolic bay-shape framework of Hsu and Evans (1989). Two coefficient parameterizations are available: **Oliveira2010, the default**, and **Hsu1989**. The former represents the coefficient observations associated with the Portuguese applications of Oliveira and Barreiro (2010); the latter represents the original coefficient table of Hsu and Evans (1989). Both use three independent sixth-degree numerical regressions within the same quadratic relationship between normalized shoreline radius and angular ratio. The sixth-degree functions are software representations of coefficient data, rather than additional physical equations published by either paper. This document presents their provenance, complete polynomial parameters, fitting diagnostics, geometric construction, field interpretation, and reproducible software use.
 
-A deterministic comparison calculated here, with methods in Section 8, covers the common reference-angle range $22.19^\circ\leq\beta\leq80^\circ$. It gives a root-mean-square radial difference of $0.00519081R_b$ on a grid extending to $\theta=270^\circ$. Approximately 93.98% of retained grid points differ by no more than $0.01R_b$. The largest separation found by the specified extrema check is $0.04659859R_b$ at $\beta=\theta=80^\circ$, where neither coefficient set satisfies exact endpoint closure. These are differences between numerical parameterizations, not errors against surveyed shorelines.
+A deterministic comparison calculated here, with methods in Section 8, covers the common reference-angle range $22.19^{\circ}\leq\beta\leq80^{\circ}$. It gives a root-mean-square radial difference of $0.00519081R_b$ on a grid extending to $\theta=270^{\circ}$. Approximately 93.98% of retained grid points differ by no more than $0.01R_b$. The largest separation found by the specified extrema check is $0.04659859R_b$ at $\beta=\theta=80^{\circ}$, where neither coefficient set satisfies exact endpoint closure. These are differences between numerical parameterizations, not errors against surveyed shorelines.
 
 The Portuguese examples demonstrate that dynamically exchanging beaches can closely resemble a static-equilibrium planform during particular seasonal conditions. Geometric agreement therefore requires interpretation alongside sediment budgets, representative wave conditions, coastal controls, and the shoreline observation itself. Oliveira and Barreiro (2010); Hsu and Evans (1989).
 
@@ -24,7 +24,7 @@ The implemented models are listed in their interface order:
 |---|---|---|
 | Selection | Default | Alternative |
 | Coefficient observations | 48 rows | 15 rows |
-| Accepted $\beta$ range | $22.19^\circ$–$88.29^\circ$ | $10^\circ$–$80^\circ$ |
+| Accepted $\beta$ range | 22.19°–88.29° | 10°–80° |
 | Coefficient degree | Six | Six |
 | Regression weighting | Equal per row | Equal per row |
 | Exact endpoint constraint | None | None |
@@ -145,7 +145,7 @@ The study locations are reproduced in their original **Figure 4 numbering** belo
 | 21 | São Pedro do Estoril |  |  |
 | 22 | Caxias |  |  |
 
-Some beaches require two analytical curves associated with the two ends of the bay. Six Table 1 rows contain paired parabolic parameter sets, giving 48 numeric records when each complete set is counted separately. The minimum reference angle is $22.19^\circ$ and the maximum is $88.29^\circ$. These are coverage limits of that application table. They should not be interpreted as a new, independently validated range for every combination of wave climate, headland geometry, and sediment regime. Oliveira and Barreiro (2010, Table 1).
+Some beaches require two analytical curves associated with the two ends of the bay. Six Table 1 rows contain paired parabolic parameter sets, giving 48 numeric records when each complete set is counted separately. The minimum reference angle is 22.19° and the maximum is 88.29°. These are coverage limits of that application table. They should not be interpreted as a new, independently validated range for every combination of wave climate, headland geometry, and sediment regime. Oliveira and Barreiro (2010, Table 1).
 
 ### 3.3 Logarithmic-spiral theory
 
@@ -157,7 +157,7 @@ Here $R_0$ is the radius at the chosen reference direction, $\theta$ is the angu
 
 A spiral can approximate the strongly curved, sheltered part of a bay. Its practical limitations are the ambiguity of its origin, the absence of an explicit incident-wave direction, and exponential radial growth that poorly represents the distant, nearly straight reach. Spiral-like shapes can also occur outside static equilibrium, so a good spiral fit alone does not establish beach stability. Hsu and Evans (1989, p. 559); Oliveira and Barreiro (2010, pp. 125, 127–129); LeBlond (1979).
 
-In the Portuguese applications, most fitted spiral angles were approximately $25^\circ$–$65^\circ$, and most spiral reference radii were below 250 m. Double-curvature examples included Sesimbra, Mareta, Martinhal, and Albufeira. The fitted origins usually differed from the diffraction controls. The spiral described the sheltered curved zone well but did not adequately describe the almost straight part of the same beach. These are findings about the spiral family, not a comparison between Baycraft's two coefficient selections. Oliveira and Barreiro (2010, pp. 127–129).
+In the Portuguese applications, most fitted spiral angles were approximately 25°–65°, and most spiral reference radii were below 250 m. Double-curvature examples included Sesimbra, Mareta, Martinhal, and Albufeira. The fitted origins usually differed from the diffraction controls. The spiral described the sheltered curved zone well but did not adequately describe the almost straight part of the same beach. These are findings about the spiral family, not a comparison between Baycraft's two coefficient selections. Oliveira and Barreiro (2010, pp. 127–129).
 
 ### 3.4 Hyperbolic-tangent theory
 
@@ -189,7 +189,7 @@ The second relationship is reproduced **as printed** in Equation 8 and Figure 6c
 
 The start of the nearly straight downcoast reach is often difficult to identify. Oliveira and Barreiro (2010) review a method relating the reference angle and control geometry to wave-field information through a limiting angle $\alpha_{\min}$. Their Equations 3–4 print:
 
-$$ \beta=90^\circ-\alpha_{\min},\qquad R_0=\frac{Y}{\tan\alpha_{\min}} $$
+$$ \beta=90^{\circ}-\alpha_{\min},\qquad R_0=\frac{Y}{\tan\alpha_{\min}} $$
 
 There is a source-notation discrepancy in that printed radius relation. For the radial control length and perpendicular offset $Y$, Equation 16 of González and Medina (2001) gives the consistent relationship below; their Equation 19 independently gives $Y=R_0\cos\alpha_{\min}$. A tangent denominator appears in their Figure 8 and in Oliveira's Equation 4. The two expressions must not be treated as interchangeable radial formulas. The cosine relation is therefore used when interpreting the radial geometry, while the preceding equation records Oliveira's printed expression explicitly. González and Medina (2001); Oliveira and Barreiro (2010).
 
@@ -211,32 +211,32 @@ Nevertheless, the parabolic static-equilibrium curves closely matched many photo
 
 Espinho illustrates the distinction. The paper describes a northern groin approximately 380 m long, a southern groin approximately 440 m long, and a shorter intermediate groin. Sediment bypassing remains possible because the active zone extends beyond the groin heads. The authors cite an estimated net southward littoral transport of roughly **one million cubic metres per year** and explain the persistent planform through balanced input and output. A deficit would alter that geometry. The example supports sediment-budget reasoning rather than an inference of zero transport from the curve fit. Oliveira and Barreiro (2010, discussing Oliveira et al., 2000).
 
-Table 1 and Figure 7 use different printed parameter sets for Espinho. Table 1 gives $\beta=58.63^\circ$, $R_0=370$ m, and coefficients $C_0=-0.20577$, $C_1=1.88805$, and $C_2=-0.68329$. Figure 7 gives $\beta=42^\circ$ and $R_0=524$ m, with $C_0=-0.011062$, $C_1=1.350184$, and $C_2=-0.362030$. The coefficient dataset documented in Section 5 follows **Table 1**. Mixing its angle with Figure 7's coefficients would create a parameter combination stated in neither place. Oliveira and Barreiro (2010, Table 1, Fig. 7).
+Table 1 and Figure 7 use different printed parameter sets for Espinho. Table 1 gives $\beta=58.63^{\circ}$, $R_0=370$ m, and coefficients $C_0=-0.20577$, $C_1=1.88805$, and $C_2=-0.68329$. Figure 7 gives $\beta=42^{\circ}$ and $R_0=524$ m, with $C_0=-0.011062$, $C_1=1.350184$, and $C_2=-0.362030$. The coefficient dataset documented in Section 5 follows **Table 1**. Mixing its angle with Figure 7's coefficients would create a parameter combination stated in neither place. Oliveira and Barreiro (2010, Table 1, Fig. 7).
 
 ### 3.7 Original Hsu–Evans evidence and construction
 
-Hsu and Evans (1989) developed the normalized relationship from model tests and observations of natural bays. Natural examples were selected as approximately static where islands or promontories lacked rivers or evident continuing sediment supply. Their observed reference angles were approximately $22^\circ$–$72^\circ$; the graphical ratio curves were extrapolated over $0^\circ$–$80^\circ$; and the published coefficient table covers $10^\circ$–$80^\circ$. These three ranges describe different parts of the evidence and should remain distinct. Hsu and Evans (1989, pp. 561–563).
+Hsu and Evans (1989) developed the normalized relationship from model tests and observations of natural bays. Natural examples were selected as approximately static where islands or promontories lacked rivers or evident continuing sediment supply. Their observed reference angles were approximately 22°–72°; the graphical ratio curves were extrapolated over 0°–80°; and the published coefficient table covers 10°–80°. These three ranges describe different parts of the evidence and should remain distinct. Hsu and Evans (1989, pp. 561–563).
 
-A single universal linear relationship between normalized radius and angular ratio did not adequately represent the dependence on $\beta$. Computer fitting led to the quadratic form with smoothly varying coefficients. Figure 4 includes ray-angle curves through $210^\circ$, $240^\circ$, and $270^\circ$, although a subsequent practical construction example lists rays only through $180^\circ$. That example does not establish $180^\circ$ as an absolute validity cutoff. Physical presence of a sandy beach, geology, and the suitability of the control geometry still limit interpretation of a mathematical continuation. Hsu and Evans (1989, Figs. 3–5, pp. 560–563).
+A single universal linear relationship between normalized radius and angular ratio did not adequately represent the dependence on $\beta$. Computer fitting led to the quadratic form with smoothly varying coefficients. Figure 4 includes ray-angle curves through 210°, 240°, and 270°, although a subsequent practical construction example lists rays only through 180°. That example does not establish 180° as an absolute validity cutoff. Physical presence of a sandy beach, geology, and the suitability of the control geometry still limit interpretation of a mathematical continuation. Hsu and Evans (1989, Figs. 3–5, pp. 560–563).
 
 The natural-bay observations listed in Table 1 of the original paper are retained below. They describe the published evidence, not an independent validation dataset for the software regressions. Hsu and Evans (1989, Table 1).
 
 | Location | Region | $\beta$ |
 |---|---|---:|
-| Magnetic Island | Queensland | $22.5^\circ$ |
-| Mission Island | Queensland | $35.0^\circ$ |
-| Philip Island | Victoria | $38.0^\circ$ |
-| Magnetic Island | Queensland | $39.0^\circ$ |
-| Wilson Promontory | Victoria | $43.0^\circ$ |
-| Keppel Island | Queensland | $43.0^\circ$ |
-| Wilson Promontory | Victoria | $52.0^\circ$ |
-| Dongara | Western Australia | $52.0^\circ$ |
-| Freycinet Peninsula | Tasmania | $55.5^\circ$ |
-| Philip Island | Victoria | $57.0^\circ$ |
-| Jurien Bay | Western Australia | $61.0^\circ$ |
-| Kangaroo Island | South Australia | $61.0^\circ$ |
-| Freycinet Peninsula | Tasmania | $71.5^\circ$ |
-| Port Arthur Peninsula | Tasmania | $72.0^\circ$ |
+| Magnetic Island | Queensland | 22.5° |
+| Mission Island | Queensland | 35.0° |
+| Philip Island | Victoria | 38.0° |
+| Magnetic Island | Queensland | 39.0° |
+| Wilson Promontory | Victoria | 43.0° |
+| Keppel Island | Queensland | 43.0° |
+| Wilson Promontory | Victoria | 52.0° |
+| Dongara | Western Australia | 52.0° |
+| Freycinet Peninsula | Tasmania | 55.5° |
+| Philip Island | Victoria | 57.0° |
+| Jurien Bay | Western Australia | 61.0° |
+| Kangaroo Island | South Australia | 61.0° |
+| Freycinet Peninsula | Tasmania | 71.5° |
+| Port Arthur Peninsula | Tasmania | 72.0° |
 
 The construction identifies the diffraction point and downcoast limit, measures $\beta$ and $R_0$, obtains coefficients, and plots the calculated radius on each chosen ray. The authors discuss a possible small adjustment of the measured reference angle for a beach not already static, suggested as no more than about one degree. Baycraft does not apply that empirical adjustment automatically. Near the upcoast control, rough rock can attenuate waves and preserve sand deposited by storms, producing departures from the idealized curve. Hsu and Evans (1989, pp. 563–564).
 
@@ -258,7 +258,7 @@ Working directly with high powers of degree-valued angles produces a poorly scal
 
 $$ x=\frac{\beta-\mu}{h} $$
 
-For Oliveira, the midpoint and half-range are $\mu=55.24^\circ$ and $h=33.05^\circ$. The source records an 80-digit QR solution in a scaled Chebyshev basis, followed by conversion to ordinary powers of $\beta$. For Hsu, the corresponding coordinate is $x=(\beta-45)/35$, and a scaled polynomial least-squares fit can be reproduced with NumPy's Polynomial fitting interface before conversion to ordinary powers. These basis choices improve numerical conditioning; they do not change the equal-weight least-squares objective. The application stores the final ordinary-power arrays and does not require a numerical-fitting package at runtime.
+For Oliveira, the midpoint and half-range are $\mu=55.24^{\circ}$ and $h=33.05^{\circ}$. The source records an 80-digit QR solution in a scaled Chebyshev basis, followed by conversion to ordinary powers of $\beta$. For Hsu, the corresponding coordinate is $x=(\beta-45)/35$, and a scaled polynomial least-squares fit can be reproduced with NumPy's Polynomial fitting interface before conversion to ordinary powers. These basis choices improve numerical conditioning; they do not change the equal-weight least-squares objective. The application stores the final ordinary-power arrays and does not require a numerical-fitting package at runtime.
 
 ### 4.2 Runtime evaluation and reproducible precision
 
@@ -294,9 +294,9 @@ These diagnostics describe the sensitivity of a coefficient-table regression to 
 
 ### 5.1 Source data, observations, and model domain
 
-**Oliveira2010 is the default coefficient selection.** Its 48 regression observations are the numeric rows of the **coeffs** in Table 1. These rows cover 42 beaches and 47 distinct reference angles. Six beaches have two complete parabolic parameter sets: São Martinho do Porto (13), São Bernardino (15), Pedra do Guincho (17), Ponta Ruiva (31), Martinhal (34), and Albufeira (40). The accepted interval is $22.19^\circ\leq\beta\leq88.29^\circ$. The original observations are attributed to Oliveira and Barreiro (2010, Table 1, p. 127).
+**Oliveira2010 is the default coefficient selection.** Its 48 regression observations are the numeric rows of the **coeffs** in Table 1. These rows cover 42 beaches and 47 distinct reference angles. Six beaches have two complete parabolic parameter sets: São Martinho do Porto (13), São Bernardino (15), Pedra do Guincho (17), Ponta Ruiva (31), Martinhal (34), and Albufeira (40). The accepted interval is $22.19^{\circ}\leq\beta\leq88.29^{\circ}$. The original observations are attributed to Oliveira and Barreiro (2010, Table 1, p. 127).
 
-Two provenance details are essential to reproducing this dataset. **Ofir (02)** has one complete angle/reference-radius record but two printed alternatives for $C_2$, namely $-0.3051$ and $-0.10908$. The numeric regression uses **only $-0.3051$**. The second printed alternative is not an additional fitted observation, although both alternatives appear in the raw table transcription. Also, São Bernardino's second branch and Albufeira's first branch have the same $\beta,C_0,C_1,C_2$ tuple at $\beta=25.38^\circ$; both rows remain in the equal-weight fit. This states the actual numerical selection without treating the paper's Ofir ambiguity as resolved by the authors. Oliveira and Barreiro (2010, Table 1).
+Two provenance details are essential to reproducing this dataset. **Ofir (02)** has one complete angle/reference-radius record but two printed alternatives for $C_2$, namely $-0.3051$ and $-0.10908$. The numeric regression uses **only $-0.3051$**. The second printed alternative is not an additional fitted observation, although both alternatives appear in the raw table transcription. Also, São Bernardino's second branch and Albufeira's first branch have the same $\beta,C_0,C_1,C_2$ tuple at $\beta=25.38^{\circ}$; both rows remain in the equal-weight fit. This states the actual numerical selection without treating the paper's Ofir ambiguity as resolved by the authors. Oliveira and Barreiro (2010, Table 1).
 
 **Model summary (Oliveira2010).**
 
@@ -305,7 +305,7 @@ Two provenance details are essential to reproducing this dataset. **Ofir (02)** 
 | Published observation source | Oliveira and Barreiro (2010), Table 1 |
 | Source beach locations | 42, numbered according to Figure 4 |
 | Fitted coefficient observations | 48 triples, six additional branches |
-| Accepted reference-angle interval | $22.19^\circ\leq\beta\leq88.29^\circ$ |
+| Accepted reference-angle interval | $22.19^{\circ}\leq\beta\leq88.29^{\circ}$ |
 | Polynomial representation | Three independent sixth-degree functions in degrees |
 | Regression weighting | Equal weight for each of the 48 rows |
 | Endpoint-closure constraint | None |
@@ -423,7 +423,7 @@ The following diagnostics are computed from the 48 documented numeric rows and t
 
 The largest absolute coefficient residuals occur at Ursa (19) for $C_0$, São Pedro do Estoril (21) for $C_1$, and Albufeira's second branch (40.2) for $C_2$. The small residuals show that the sixth-degree functions closely reproduce the selected table values. Because the data include paired branches and a repeated tuple, row-wise leave-one-out diagnostics are not leave-one-beach-out validation and do not establish spatial independence. They also do not measure waterline or sediment-budget error. Oliveira and Barreiro (2010), with the coefficient-regression diagnostics defined in Section 4.
 
-The accepted upper range requires particular attention to geometric closure. At $\beta=88.29^\circ$, the implemented coefficients sum to approximately **1.2275**, so the first radius is about 22.75% larger than the nominal $R_b$. The source row itself sums to 1.22633. Most of this endpoint discrepancy is therefore inherited from the tabulated parameter combination, rather than introduced by the small sixth-degree fitting residual. It is outside the common range of the two models used in Section 8. A supported coefficient input is not a guarantee that the resulting curve satisfies every ideal geometric constraint. Oliveira and Barreiro (2010, Table 1); direct evaluation of the documented data and polynomials.
+The accepted upper range requires particular attention to geometric closure. At $\beta=88.29^{\circ}$, the implemented coefficients sum to approximately **1.2275**, so the first radius is about 22.75% larger than the nominal $R_b$. The source row itself sums to 1.22633. Most of this endpoint discrepancy is therefore inherited from the tabulated parameter combination, rather than introduced by the small sixth-degree fitting residual. It is outside the common range of the two models used in Section 8. A supported coefficient input is not a guarantee that the resulting curve satisfies every ideal geometric constraint. Oliveira and Barreiro (2010, Table 1); direct evaluation of the documented data and polynomials.
 
 ## 6. Hsu1989 coefficient parameterization
 
@@ -433,7 +433,7 @@ Hsu and Evans (1989) publish 15 coefficient rows at five-degree increments and e
 
 $$ t=\frac{\beta-\beta_j}{5},\qquad C_i^{\mathrm{linear}}(\beta)=(1-t)C_{i,j}+tC_{i,j+1} $$
 
-Baycraft's Hsu1989 selection evaluates degree-six regressions of those 15 rows. The distinction concerns the numerical representation of the published data; the underlying parabolic equation and coefficient provenance remain those of Hsu and Evans (1989). The accepted interval is $10^\circ\leq\beta\leq80^\circ$, and there is no artificial zero-degree observation.
+Baycraft's Hsu1989 selection evaluates degree-six regressions of those 15 rows. The distinction concerns the numerical representation of the published data; the underlying parabolic equation and coefficient provenance remain those of Hsu and Evans (1989). The accepted interval is $10^{\circ}\leq\beta\leq80^{\circ}$, and there is no artificial zero-degree observation.
 
 **Model summary (Hsu1989).**
 
@@ -442,7 +442,7 @@ Baycraft's Hsu1989 selection evaluates degree-six regressions of those 15 rows. 
 | Published observation source | Hsu and Evans (1989), Table 2 |
 | Source beach locations | 14 natural-bay observations in Table 1, not regression inputs |
 | Fitted coefficient observations | 15 triples at five-degree intervals |
-| Accepted reference-angle interval | $10^\circ\leq\beta\leq80^\circ$ |
+| Accepted reference-angle interval | $10^{\circ}\leq\beta\leq80^{\circ}$ |
 | Polynomial representation | Three independent sixth-degree functions in degrees |
 | Regression weighting | Equal weight for each of the 15 rows |
 | Endpoint-closure constraint | None |
@@ -467,7 +467,7 @@ Baycraft's Hsu1989 selection evaluates degree-six regressions of those 15 rows. 
 | 75 | -0.505 | 2.422 | -0.909 |
 | 80 | -0.600 | 2.520 | -0.906 |
 
-The entry at $\beta=40^\circ$ is printed as negative zero and is numerically zero. The three-decimal precision of the table should be retained when judging the meaning of much more precise polynomial parameters. The Hsu table is distinct from coefficient tables and polynomial representations attributed to other publications, including Silvester and Hsu (1993). Hsu and Evans (1989, Table 2); Oliveira and Barreiro (2010, p. 125).
+The entry at $\beta=40^{\circ}$ is printed as negative zero and is numerically zero. The three-decimal precision of the table should be retained when judging the meaning of much more precise polynomial parameters. The Hsu table is distinct from coefficient tables and polynomial representations attributed to other publications, including Silvester and Hsu (1993). Hsu and Evans (1989, Table 2); Oliveira and Barreiro (2010, p. 125).
 
 For completeness, the scaled least-squares construction for this dataset is:
 
@@ -554,13 +554,13 @@ The following values are direct evaluations of the full-precision arrays. A dash
 
 | $\beta$ | Oliveira $R(\beta)/R_b$ | Hsu $R(\beta)/R_b$ |
 |---:|---:|---:|
-| $30^\circ$ | 0.996234772008 | 0.995798650472 |
-| $45^\circ$ | 0.997682529253 | 0.994294038263 |
-| $60^\circ$ | 0.998715004049 | 0.995672477574 |
-| $80^\circ$ | 1.060599934731 | 1.014001341589 |
-| $88.29^\circ$ | 1.227542230835 | — |
+| 30° | 0.996234772008 | 0.995798650472 |
+| 45° | 0.997682529253 | 0.994294038263 |
+| 60° | 0.998715004049 | 0.995672477574 |
+| 80° | 1.060599934731 | 1.014001341589 |
+| 88.29° | 1.227542230835 | — |
 
-Within the common range through $80^\circ$, the extrema check gives Oliveira endpoint defects from approximately $-0.00397573$ at $\beta=33.752^\circ$ to $+0.06059993$ at $80^\circ$. The corresponding Hsu range is approximately $-0.00598708$ at $50.22785^\circ$ to $+0.01400134$ at $80^\circ$. These ranges belong to that comparison interval; they do not describe Oliveira's extension to $88.29^\circ$. The relevant coefficients originate in Oliveira and Barreiro (2010) and Hsu and Evans (1989); the defects are calculations from the stored arrays.
+Within the common range through 80°, the extrema check gives Oliveira endpoint defects from approximately $-0.00397573$ at $\beta=33.752^{\circ}$ to $+0.06059993$ at 80°. The corresponding Hsu range is approximately $-0.00598708$ at 50.22785° to $+0.01400134$ at 80°. These ranges belong to that comparison interval; they do not describe Oliveira's extension to 88.29°. The relevant coefficients originate in Oliveira and Barreiro (2010) and Hsu and Evans (1989); the defects are calculations from the stored arrays.
 
 ### 7.2 Angular and coefficient sensitivity
 
@@ -588,7 +588,7 @@ The coefficients can partially compensate in the combined radius. Consequently, 
 
 ### 8.1 Comparison design
 
-The comparison evaluates the stored coefficient functions without refitting, normalizing, or adjusting the control points. Both models use the same $R_b$, $\beta$, ray angles, and Cartesian orientation. Their shared reference-angle interval is $22.19^\circ$–$80^\circ$. With identical controls, the normalized radial difference is:
+The comparison evaluates the stored coefficient functions without refitting, normalizing, or adjusting the control points. Both models use the same $R_b$, $\beta$, ray angles, and Cartesian orientation. Their shared reference-angle interval is 22.19°–80°. With identical controls, the normalized radial difference is:
 
 $$ \Delta r=r_{\mathrm O}-r_{\mathrm H}=\Delta C_0+q\,\Delta C_1+q^2\Delta C_2 $$
 
@@ -598,7 +598,7 @@ $$ \Delta R=R_b\Delta r $$
 
 This signed difference uses Oliveira minus Hsu. It is a comparison between two implementations of the same empirical family, with related data ancestry. It does not use either model as a ground truth and does not compare a calculated curve with a surveyed beach. The physical framework and source tables are those of Oliveira and Barreiro (2010) and Hsu and Evans (1989); the statistics below are deterministic software calculations.
 
-The principal grid has **401 uniformly spaced reference angles** from $22.19^\circ$ to $80^\circ$ and **481 uniformly spaced ray angles** from $22.19^\circ$ to $270^\circ$. Retaining only $\theta\geq\beta$ leaves **170,233 pairs**. Each retained pair has equal weight. This design specifies the reported distribution: it is neither uniform in shoreline arclength nor a random sample of field beaches. The $270^\circ$ extent is a comparison setting; the graphical application's default limit is $150^\circ$.
+The principal grid has **401 uniformly spaced reference angles** from 22.19° to 80° and **481 uniformly spaced ray angles** from 22.19° to 270°. Retaining only $\theta\geq\beta$ leaves **170,233 pairs**. Each retained pair has equal weight. This design specifies the reported distribution: it is neither uniform in shoreline arclength nor a random sample of field beaches. The 270° extent is a comparison setting; the graphical application's default limit is 150°.
 
 For an optional dimensionless percentage comparison, the symmetric denominator is:
 
@@ -608,7 +608,7 @@ Percentage values are omitted where the denominator is below 0.02. This prevents
 
 ### 8.2 Principal radial results
 
-The following statistics reproduce the comparison on the specified $270^\circ$ grid.
+The following statistics reproduce the comparison on the specified 270° grid.
 
 | Statistic | Normalized radial difference |
 |---|---:|
@@ -630,7 +630,7 @@ A separate extrema check evaluates 20,001 reference angles. For each fixed angle
 
 $$ q_*=-\frac{\Delta C_1}{2\Delta C_2},\qquad \Delta C_2\ne0 $$
 
-The relevant interval is $\beta/270\leq q\leq1$. This produces a checked minimum $\Delta r\approx-0.001495555329$ near $\beta=28.696516^\circ$, $\theta=58.595713^\circ$, and a checked maximum $\Delta r\approx0.046598593141$ at $\beta=\theta=80^\circ$. The latter corresponds to **4.6599 m for $R_b=100$ m**. Because $\beta$ remains sampled, this procedure is not a certified continuous two-dimensional global optimization.
+The relevant interval is $\beta/270\leq q\leq1$. This produces a checked minimum $\Delta r\approx-0.001495555329$ near $\beta=28.696516^{\circ}$, $\theta=58.595713^{\circ}$, and a checked maximum $\Delta r\approx0.046598593141$ at $\beta=\theta=80^{\circ}$. The latter corresponds to **4.6599 m for $R_b=100$ m**. Because $\beta$ remains sampled, this procedure is not a certified continuous two-dimensional global optimization.
 
 ### 8.3 Coefficient differences and endpoint effects
 
@@ -680,15 +680,15 @@ On the 401 reference-angle nodes, the coefficient differences are:
 | RMS difference | 0.0018517239012 | 0.010855007036 | 0.0045800166186 |
 | Max. abs. dif. | 0.0036729105071 | 0.050678229363 | 0.0084715450272 |
 
-The linear-ratio coefficient has the largest absolute inter-model variation, but the actual shoreline radius depends on all three weighted terms. At $\beta=\theta=80^\circ$, the endpoint ratios are approximately 1.06060 for Oliveira and 1.01400 for Hsu, accounting for the largest checked separation. The nominal $E$ point remains identical in this comparison. Moving $E$, renormalizing coefficients, or snapping endpoints would answer a different numerical question. Data ancestry: Oliveira and Barreiro (2010); Hsu and Evans (1989).
+The linear-ratio coefficient has the largest absolute inter-model variation, but the actual shoreline radius depends on all three weighted terms. At $\beta=\theta=80^{\circ}$, the endpoint ratios are approximately 1.06060 for Oliveira and 1.01400 for Hsu, accounting for the largest checked separation. The nominal $E$ point remains identical in this comparison. Moving $E$, renormalizing coefficients, or snapping endpoints would answer a different numerical question. Data ancestry: Oliveira and Barreiro (2010); Hsu and Evans (1989).
 
-On the retained $270^\circ$ grid, the raw normalized radii range from approximately 0.08175055 to 1.06048421 for Oliveira and 0.06735498 to 1.01389226 for Hsu. Neither produces a negative radius on those sampled nodes; 400 Oliveira nodes and 136 Hsu nodes exceed one. Those maxima differ slightly from the exact $\theta=\beta=80^\circ$ evaluations because the rectangular grid does not include every reference ray. A negative $C_0$ alone does not imply a negative complete radius. At sufficiently extended ray angles, however, finite negative radii can occur, and Baycraft retains them in the Cartesian calculation.
+On the retained 270° grid, the raw normalized radii range from approximately 0.08175055 to 1.06048421 for Oliveira and 0.06735498 to 1.01389226 for Hsu. Neither produces a negative radius on those sampled nodes; 400 Oliveira nodes and 136 Hsu nodes exceed one. Those maxima differ slightly from the exact $\theta=\beta=80^{\circ}$ evaluations because the rectangular grid does not include every reference ray. A negative $C_0$ alone does not imply a negative complete radius. At sufficiently extended ray angles, however, finite negative radii can occur, and Baycraft retains them in the Cartesian calculation.
 
 ### 8.4 Comparison at the default angular extent
 
-A second calculation uses the same 401 reference angles with 481 ray-angle nodes from $22.19^\circ$ to **$150^\circ$**, retaining 149,150 pairs. It samples the angular domain associated with the default limit, rather than using the GUI's five-degree sampling step. It is a separately defined comparison and should not be combined with the $270^\circ$ statistics.
+A second calculation uses the same 401 reference angles with 481 ray-angle nodes from 22.19° to **150°**, retaining 149,150 pairs. It samples the angular domain associated with the default limit, rather than using the GUI's five-degree sampling step. It is a separately defined comparison and should not be combined with the 270° statistics.
 
-| Statistic | $150^\circ$ domain | $270^\circ$ domain |
+| Statistic | 150° domain | 270° domain |
 |---|---:|---:|
 | Retained pairs | 149,150 | 170,233 |
 | Mean signed difference | 0.002759673383 | 0.002529499840 |
@@ -699,7 +699,7 @@ A second calculation uses the same 401 reference angles with 481 ray-angle nodes
 | Within $0.01R_b$ | 93.6071% | 93.9771% |
 | Within $0.02R_b$ | 97.0332% | 98.4233% |
 
-The $150^\circ$ RMS is approximately **0.6103% of $R_b$**. The difference between the two aggregate RMS values reflects both the angular extent and the distribution of retained nodes. A larger comparison domain can lower the average difference when it adds many rays with smaller separation. Neither statistic describes all possible choices of angles or a site's actual distribution of shoreline positions.
+The 150° RMS is approximately **0.6103% of $R_b$**. The difference between the two aggregate RMS values reflects both the angular extent and the distribution of retained nodes. A larger comparison domain can lower the average difference when it adds many rays with smaller separation. Neither statistic describes all possible choices of angles or a site's actual distribution of shoreline positions.
 
 ### 8.5 Scientific conclusions from the comparison
 
@@ -707,7 +707,7 @@ The $150^\circ$ RMS is approximately **0.6103% of $R_b$**. The difference betwee
 
 **Oliveira's smaller coefficient-fit residuals do not establish better shoreline prediction.** Its fit uses a different table, more observations, different angular coverage, and differently rounded inputs. Both parameterizations share the parabolic equation and related empirical ancestry. Their agreement is useful for sensitivity analysis, but is not independent validation against coastlines. The default identifies the application's initial selection, rather than a universal scientific ranking. Oliveira and Barreiro (2010); Hsu and Evans (1989).
 
-**The comparison applies only where both coefficient sets are defined.** Hsu alone covers $10^\circ\leq\beta<22.19^\circ$, while Oliveira alone covers $80^\circ<\beta\leq88.29^\circ$. No direct two-model statistics are asserted on those nonoverlapping intervals. In particular, the larger Oliveira endpoint defect near $88.29^\circ$ remains important even though it is absent from the shared-domain comparison. Oliveira and Barreiro (2010, Table 1); Hsu and Evans (1989, Table 2).
+**The comparison applies only where both coefficient sets are defined.** Hsu alone covers $10^{\circ}\leq\beta<22.19^{\circ}$, while Oliveira alone covers $80^{\circ}<\beta\leq88.29^{\circ}$. No direct two-model statistics are asserted on those nonoverlapping intervals. In particular, the larger Oliveira endpoint defect near 88.29° remains important even though it is absent from the shared-domain comparison. Oliveira and Barreiro (2010, Table 1); Hsu and Evans (1989, Table 2).
 
 **Field assessment requires a separate observation-based comparison.** The analyst must evaluate representative wave conditions, control placement, sediment exchange, shoreline datum, and seasonal state. Published studies identify substantial sensitivity to these choices, but the present numerical comparison does not quantify their uncertainty relative to the coefficient differences. A claim that one uncertainty source dominates another would require a site-specific calculation. Lausman, Klein, and Stive (2010a, 2010b); Jackson and Cooper (2010); Oliveira and Barreiro (2010).
 
@@ -759,9 +759,9 @@ $$ \mathbf n=(-v_y,v_x) $$
 
 The software reverses $\mathbf n$ if its dot product with $H-E$ is negative, selecting the normal toward the diffraction-point side. It then reports the wave **FROM** bearing:
 
-$$ B=\left[\frac{180}{\pi}\,\mathrm{atan2}(n_x,-n_y)\right]\bmod360^\circ $$
+$$ B=\left[\frac{180}{\pi}\,\mathrm{atan2}(n_x,-n_y)\right]\bmod360^{\circ} $$
 
-This convention gives north as $0^\circ$, east as $90^\circ$, south as $180^\circ$, and west as $270^\circ$. The bearing is undefined when $E=W$, or when $H$ lies on or numerically too close to the crest line for its side to be determined. The convention assumes the original source image is north-up. Rotating the display changes the view, not the source coordinate frame or reported bearing. A north-up requirement for this software's bearing calculation should not be generalized to all coastal imagery, which can instead be analyzed with an explicitly transformed coordinate system. The physical distinction between crest and wave orthogonal follows Hsu and Evans (1989).
+This convention gives north as 0°, east as 90°, south as 180°, and west as 270°. The bearing is undefined when $E=W$, or when $H$ lies on or numerically too close to the crest line for its side to be determined. The convention assumes the original source image is north-up. Rotating the display changes the view, not the source coordinate frame or reported bearing. A north-up requirement for this software's bearing calculation should not be generalized to all coastal imagery, which can instead be analyzed with an explicitly transformed coordinate system. The physical distinction between crest and wave orthogonal follows Hsu and Evans (1989).
 
 ## 10. Calibration, coordinates, and measurements
 
@@ -1046,11 +1046,11 @@ $$ H=(0,0),\qquad E=(100,0),\qquad W=(0,100) $$
 
 The two vectors are $\mathbf u=(100,0)$ and $\mathbf v=(-100,100)$, giving:
 
-$$ R_b=100,\qquad \beta=45^\circ,\qquad \phi=0,\qquad s=+1 $$
+$$ R_b=100,\qquad \beta=45^{\circ},\qquad \phi=0,\qquad s=+1 $$
 
-The directed crest normal toward $H$ is $(-100,-100)$, giving a wave FROM bearing of $315^\circ$ in the north-up image convention. With a ten-degree increment and a $150^\circ$ limit, the sampled angles are $45^\circ,55^\circ,\ldots,145^\circ$: eleven points, with no forced final sample at $150^\circ$. These are implementation calculations using the parabolic construction of Hsu and Evans (1989) and the coefficient selections documented above.
+The directed crest normal toward $H$ is $(-100,-100)$, giving a wave FROM bearing of 315° in the north-up image convention. With a ten-degree increment and a 150° limit, the sampled angles are $45^{\circ},55^{\circ},\ldots,145^{\circ}$: eleven points, with no forced final sample at 150°. These are implementation calculations using the parabolic construction of Hsu and Evans (1989) and the coefficient selections documented above.
 
-At $\beta=45^\circ$, the coefficients and selected source-pixel radii are:
+At $\beta=45^{\circ}$, the coefficients and selected source-pixel radii are:
 
 | Coefficient | Oliveira2010 | Hsu1989 |
 |---|---:|---:|
@@ -1060,13 +1060,13 @@ At $\beta=45^\circ$, the coefficients and selected source-pixel radii are:
 
 | $\theta$ | Oliveira radius | Hsu radius | Oliveira minus Hsu |
 |---:|---:|---:|---:|
-| $45^\circ$ | 99.76825293 | 99.42940383 | 0.33884910 |
-| $95^\circ$ | 55.73309067 | 55.39679922 | 0.33629145 |
-| $145^\circ$ | 37.37765247 | 37.08414090 | 0.29351156 |
+| 45° | 99.76825293 | 99.42940383 | 0.33884910 |
+| 95° | 55.73309067 | 55.39679922 | 0.33629145 |
+| 145° | 37.37765247 | 37.08414090 | 0.29351156 |
 
-For the Oliveira sample at $\theta=95^\circ$, the Cartesian ray angle is $50^\circ$:
+For the Oliveira sample at $\theta=95^{\circ}$, the Cartesian ray angle is 50°:
 
-$$ P=(55.73309067\cos50^\circ,\ 55.73309067\sin50^\circ) $$
+$$ P=(55.73309067\cos50^{\circ},\ 55.73309067\sin50^{\circ}) $$
 
 The source point is approximately $(35.82454013,42.69402441)$ pixels. The rounded drawing point is $(36,43)$. If $p=1$ m per pixel and source pixel $(0,0)$ is assigned map coordinates $(500000,4600000)$ m, the corresponding map point is:
 
@@ -1119,7 +1119,7 @@ A scientific report using a Baycraft construction should retain the following in
 
 Baycraft implements two reproducible coefficient parameterizations within a common parabolic bay-shape framework. **Oliveira2010 is the default and is documented first**, with all 48 fitted observations, its complete degree-six coefficients, expanded equations, and diagnostics. Hsu1989 provides the corresponding representation of the 15-row original table. The governing empirical equation and static-equilibrium interpretation originate with Hsu and Evans (1989); the Portuguese application and its parameter observations are documented by Oliveira and Barreiro (2010).
 
-The degree-six regressions closely reproduce their selected coefficient data. The documented inter-model comparison also shows close average radial agreement over the shared reference-angle interval, together with a larger localized separation near $\beta=\theta=80^\circ$. Exact endpoint closure is absent from both numerical parameterizations, and Oliveira's full upper range contains substantially larger source-inherited closure departures. The relevant practical conclusions are therefore the domain of use, the actual curve geometry, and the endpoint residual as well as the regression statistics. These are numerical findings from the explicitly stated data and methods, rather than additional field results attributed to either source paper.
+The degree-six regressions closely reproduce their selected coefficient data. The documented inter-model comparison also shows close average radial agreement over the shared reference-angle interval, together with a larger localized separation near $\beta=\theta=80^{\circ}$. Exact endpoint closure is absent from both numerical parameterizations, and Oliveira's full upper range contains substantially larger source-inherited closure departures. The relevant practical conclusions are therefore the domain of use, the actual curve geometry, and the endpoint residual as well as the regression statistics. These are numerical findings from the explicitly stated data and methods, rather than additional field results attributed to either source paper.
 
 The field interpretation remains conditional on the coastal system. The Portuguese examples show that a dynamically exchanging beach can resemble a static-equilibrium shape at a particular seasonal stage. The original Hsu–Evans construction provides a limiting geometrical hypothesis whose engineering application requires sediment-volume, storm-response, and neighboring-coast considerations. A complete use of Baycraft couples reproducible geometry with evidence about those processes. Oliveira and Barreiro (2010); Hsu and Evans (1989).
 
