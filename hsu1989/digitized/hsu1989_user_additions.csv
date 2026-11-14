@@ -1,0 +1,10 @@
+﻿point_id,dataset,theta_deg,beta_deg,r_ratio,point_type,x_px,y_px,symbol,status,note
+O030,model,30,0,0,origin,51.04587441119529,462.46505846103986,defined origin,defined_origin,"Exact (0,0) origin for user-defined theta=30 degree curve; not an original model symbol."
+S030-B07p25,model,30,7.25,0.25,user_supplied,111.18647819190707,349.98599557272166,user supplied point,user_supplied,Coordinates supplied explicitly by the user; not extracted from the original printed symbol.
+S030-B11p00,model,30,11,0.4,user_supplied,142.697927967199,282.2429241499292,user supplied point,user_supplied,Coordinates supplied explicitly by the user; not extracted from the original printed symbol.
+S030-B15p00,model,30,15,0.525,user_supplied,175.11993243081878,226.53056417777927,user supplied point,user_supplied,Coordinates supplied explicitly by the user; not extracted from the original printed symbol.
+S030-B18p00,model,30,18,0.65,user_supplied,199.80649432157475,169.6022701475104,user supplied point,user_supplied,Coordinates supplied explicitly by the user; not extracted from the original printed symbol.
+S180-B70p00,model,180,70,0.31,user_supplied,628.7896605970496,325.39593286336753,user supplied point,user_supplied,Coordinates supplied explicitly by the user; not extracted from the original printed symbol.
+S210-B70p00,model,210,70,0.225,user_supplied,628.8858871059108,362.999503259973,user supplied point,user_supplied,Coordinates supplied explicitly by the user; not extracted from the original printed symbol.
+S240-B70p00,model,240,70,0.17,user_supplied,628.9506576588216,388.31065789742786,user supplied point,user_supplied,Coordinates supplied explicitly by the user; not extracted from the original printed symbol.
+S270-B70p00,model,270,70,0.16,user_supplied,628.9621409121625,392.79810455325014,user supplied point,user_supplied,Coordinates supplied explicitly by the user; not extracted from the original printed symbol.
