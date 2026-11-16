@@ -1038,42 +1038,6 @@ Image import supports JPG/JPEG, PNG, BMP, TIF/TIFF, and GIF through the correspo
 
 The print workflow uses a prepared image. Windows hands that image to the native printing workflow; the non-Windows Python path provides the prepared image location. A raster export is not a GIS vector dataset and does not replace the .bay project or numerical coordinates. Document the shoreline source, map frame, and export scale when using the image in a scientific or engineering report. Oliveira and Barreiro (2010); Klein et al. (2003).
 
-## 13. Worked numerical example
-
-Consider the source-image controls used in the command-line examples:
-
-$$ H=(0,0),\qquad E=(100,0),\qquad W=(0,100) $$
-
-The two vectors are $\mathbf u=(100,0)$ and $\mathbf v=(-100,100)$, giving:
-
-$$ R_b=100,\qquad \beta=45^{\circ},\qquad \phi=0,\qquad s=+1 $$
-
-The directed crest normal toward $H$ is $(-100,-100)$, giving a wave FROM bearing of 315° in the north-up image convention. With a ten-degree increment and a 150° limit, the sampled angles are $45^{\circ},55^{\circ},\ldots,145^{\circ}$: eleven points, with no forced final sample at 150°. These are implementation calculations using the parabolic construction of Hsu and Evans (1989) and the coefficient selections documented above.
-
-At $\beta=45^{\circ}$, the coefficients and selected source-pixel radii are:
-
-| Coefficient | Oliveira2010 | Hsu1989 |
-|---|---:|---:|
-| $C_0$ | -0.036172862634 | -0.037747241407 |
-| $C_1$ | 1.450139710960 | 1.444598396444 |
-| $C_2$ | -0.416284319073 | -0.412557116774 |
-
-| $\theta$ | Oliveira radius | Hsu radius | Oliveira minus Hsu |
-|---:|---:|---:|---:|
-| 45° | 99.76825293 | 99.42940383 | 0.33884910 |
-| 95° | 55.73309067 | 55.39679922 | 0.33629145 |
-| 145° | 37.37765247 | 37.08414090 | 0.29351156 |
-
-For the Oliveira sample at $\theta=95^{\circ}$, the Cartesian ray angle is 50°:
-
-$$ P=(55.73309067\cos50^{\circ},\ 55.73309067\sin50^{\circ}) $$
-
-The source point is approximately $(35.82454013,42.69402441)$ pixels. The rounded drawing point is $(36,43)$. If $p=1$ m per pixel and source pixel $(0,0)$ is assigned map coordinates $(500000,4600000)$ m, the corresponding map point is:
-
-$$ (X,Y)=(500035.82454013,\ 4599957.30597559)\ \mathrm{m} $$
-
-The first Oliveira sample is approximately $(99.76825293,0)$, demonstrating the endpoint residual relative to nominal $E=(100,0)$. Changing the calibration to 2 m per pixel doubles physical radii and distances while leaving the coefficient values, normalized shape, and source-image geometry unchanged. This example is a deterministic numerical illustration, not a calibration or validation against a coastal site.
-
 ## 14. Interpretation, uncertainty, and reporting
 
 ### 14.1 Observed shoreline and representative conditions
@@ -1117,7 +1081,7 @@ A scientific report using a Baycraft construction should retain the following in
 
 ## 15. Conclusions
 
-Baycraft implements two reproducible coefficient parameterizations within a common parabolic bay-shape framework. **Oliveira2010 is the default and is documented first**, with all 48 fitted observations, its complete degree-six coefficients, expanded equations, and diagnostics. Hsu1989 provides the corresponding representation of the 15-row original table. The governing empirical equation and static-equilibrium interpretation originate with Hsu and Evans (1989); the Portuguese application and its parameter observations are documented by Oliveira and Barreiro (2010).
+Baycraft implements two reproducible coefficient parameterizations within a common parabolic bay-shape framework. **Oliveira2010 is the default model**, with all 48 fitted observations, its complete degree-six coefficients, expanded equations, and diagnostics. Hsu1989 provides the corresponding representation of the 15-row original table. The governing empirical equation and static-equilibrium interpretation originate with Hsu and Evans (1989); the Portuguese application and its parameter observations are documented by Oliveira and Barreiro (2010).
 
 The degree-six regressions closely reproduce their selected coefficient data. The documented inter-model comparison also shows close average radial agreement over the shared reference-angle interval, together with a larger localized separation near $\beta=\theta=80^{\circ}$. Exact endpoint closure is absent from both numerical parameterizations, and Oliveira's full upper range contains substantially larger source-inherited closure departures. The relevant practical conclusions are therefore the domain of use, the actual curve geometry, and the endpoint residual as well as the regression statistics. These are numerical findings from the explicitly stated data and methods, rather than additional field results attributed to either source paper.
 
