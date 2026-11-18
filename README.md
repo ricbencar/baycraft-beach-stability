@@ -365,7 +365,7 @@ The following table lists every fitted coefficient observation, with the **Portu
 
 ### 5.2 Full-precision sixth-degree polynomial coefficients
 
-**Full-precision polynomial coefficients (Oliveira2010).** The tables use the common format $a_{i,k}$ for powers $\beta^k$ ($k=0,\ldots,6$) and are in ascending power order. Each of the three series is shown separately to prevent wide tables in a portrait PDF. Keep all digits when reproducing the computation. The equal-weight, scaled-QR fit of the 48 observations reproduces all 21 stored binary64 coefficient literals. Oliveira and Barreiro (2010, Table 1) provide the source observations, not these degree-six equations.
+**Full-precision polynomial coefficients (Oliveira2010).** The tables use the common format $a_{i,k}$ for powers $\beta^k$ ($k=0,\ldots,6$) and are in ascending power order. The equal-weight, scaled-QR fit of the 48 observations reproduces all 21 stored binary64 coefficient literals. Oliveira and Barreiro (2010, Table 1) provide the source observations, not these degree-six equations.
 
 | Power $k$ for $C_0$ | $a_{0,k}$ |
 |---:|---:|
@@ -477,7 +477,7 @@ The fitted polynomial is converted back to ordinary degree powers before storage
 
 ### 6.2 Full-precision sixth-degree polynomial coefficients
 
-**Full-precision polynomial coefficients (Hsu1989).** The tables use the common format $a_{i,k}$ for powers $\beta^k$ ($k=0,\ldots,6$) and are in ascending power order. Each of the three series is shown separately to prevent wide tables in a portrait PDF. Keep all digits when reproducing the computation; even the small high-order terms contribute at degree-valued $\beta$. Hsu and Evans (1989, Table 2) provide the source observations, not these degree-six equations.
+**Full-precision polynomial coefficients (Hsu1989).** The tables use the common format $a_{i,k}$ for powers $\beta^k$ ($k=0,\ldots,6$) and are in ascending power order. Hsu and Evans (1989, Table 2) provide the source observations, not these degree-six equations.
 
 | Power $k$ for $C_0$ | $a_{0,k}$ |
 |---:|---:|
